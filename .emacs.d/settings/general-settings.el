@@ -60,7 +60,7 @@
 (tool-bar-mode 0)
 
 ;; don't show the scroll bar
-(scroll-bar-mode 0)
+(if window-system (scroll-bar-mode 0))
 
 ;; auto Brace completion, include () [] "" {} not '
 (electric-pair-mode t)
