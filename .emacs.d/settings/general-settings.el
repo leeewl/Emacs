@@ -1,15 +1,17 @@
-﻿;--------------------------------;
+;--------------------------------;
 ;;; General or Global Settings ;;;
 ;--------------------------------;
 
-;; Setting English Font
-(set-face-attribute
-    'default nil :font "Consolas 14")
-;; setting Chinese Font
-(dolist (charset '(kana han symbol cjk-misc bopomofo))
-(set-fontset-font (frame-parameter nil 'font)
-    charset
-        (font-spec :family "Microsoft Yahei" :size 16)))
+(if (system-is-windows)
+    (progn
+        ;; Setting English Font
+        (set-face-attribute
+            'default nil :font "Consolas 14")
+        ;; setting Chinese Font
+        (dolist (charset '(kana han symbol cjk-misc bopomofo))
+        (set-fontset-font (frame-parameter nil 'font)
+            charset
+                (font-spec :family "Microsoft Yahei" :size 16)))))
 
 ;; 设置编码utf-8
 (set-language-environment "UTF-8")
