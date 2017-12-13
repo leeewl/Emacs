@@ -1,5 +1,5 @@
 ;; path where setting files are kept
-(add-to-list 'load-path' "~/Emacs/.emacs.d/settings")
+(add-to-list 'load-path' "~/.emacs.d/settings")
 
 ;; define various custom functions
 (require 'custom-functions)
